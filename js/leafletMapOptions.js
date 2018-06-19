@@ -21,7 +21,7 @@ var marker = L.marker([45, -97]).addTo(map);
 
 
 // CIRCLE
-var circle = L.circle([44, -94],{
+/*var circle = L.circle([44, -94],{
     color: 'red',
     fillColor: 'red',
     opacity: .75,
@@ -37,10 +37,10 @@ var polygon = L.polygon(
     fillColor: 'green',
     opacity: 1
 }).addTo(map);
+*/
 
 
-
-marker.bindPopup("<h1>Hey check it out!</h1>")
-circle.bindPopup("<p>NOAICE!</p>")
-polygon.bindPopup("<em>yeah nice!</em>")
+marker.bindPopup("<h2>TEST Shapename</h2><p1>TEST TEXT</p1>")
+//circle.bindPopup("<p>NOAICE!</p>")
+//polygon.bindPopup("<em>yeah nice!</em>")
 
