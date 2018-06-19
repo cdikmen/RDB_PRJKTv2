@@ -14,11 +14,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="lib/leaflet.css">
     <link rel="stylesheet" href="css/leafletMapOptions.css">
-
-
-
 </head>
 
+</style>
 <body>
     <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
@@ -26,8 +24,9 @@
 
     <!-- Add your site or application content here -->
 
+    <div id="map" style="width: 1600px"></div>
 
-    <div class="topHeader" id="mapHeader">
+    <div class="topHeader" id="mapHeader" style="position: relative;">
         <ul id="nav">
             <li><a href="#">Video Tutorials</a></li>
             <li><a href="#">Magic Button</a></li>
@@ -35,9 +34,6 @@
             <li><a href="#">Magic Button</a></li>
         </ul>
     </div>
-
-    <div id="map"></div>
-
     
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
