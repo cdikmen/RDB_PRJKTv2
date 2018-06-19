@@ -105,8 +105,8 @@ assures that it will float above the map.
 position:absolute means it won't move. It's stuck. */
 
 html, body, #map {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
 }
 
 #map {
