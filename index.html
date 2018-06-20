@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="no-js" lang="de">
 
@@ -16,15 +17,11 @@
         background-color: #fff
     }</style>
     <link rel="stylesheet" href="css/leafletMapOptions.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 </style>
 <body>
-    <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-    <!-- Add your site or application content here -->
 
     <div id="map" style="width: 1600px"></div>
 
@@ -53,7 +50,7 @@
                     <option value="Other">Other</option>
                 </select></a>
             </li> 
-            <li><a href="#">OKAY!</a></li>
+            <li><button type="submit">OKAY!</button></li>
             <li><a href="#">Date
                 <input type="text">
                     </a>
@@ -95,6 +92,26 @@
         ga('send', 'pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    <script>
+        function updateMap(data){
+            $latitude = data;
+            $longitude = data;
+            $summary = data;
+
+            var map = L.map('map').setView([$latitude, $longitude], 13);
+            L.marker([$latitude, $longitude]).addTo(map)
+            .bindPopup($summary);
+        }
+
+
+    $('.getDataButton').click(function(){
+    $.post( "RDB/server.php",{data : data}, function( data ) {
+      $( ".result" ).html( data );
+      function updateMap(data);
+    });
+});
+    </script>
 </body>
 
 </html>
